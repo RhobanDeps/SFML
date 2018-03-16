@@ -47,7 +47,14 @@ if(NOT CMAKE_OSX_SYSROOT)
 endif()
 
 # project name
-project(SFML)
+project(sfml)
+
+find_package(catkin REQUIRED)
+
+catkin_package(
+    INCLUDE_DIRS include
+    LIBRARIES sfml-graphics sfml-window sfml-system GL GLU
+)
 
 # include the configuration file
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/Config.cmake)
@@ -81,8 +88,8 @@ endif()
 # add options to select which modules to build
 sfml_set_option(SFML_BUILD_WINDOW TRUE BOOL "TRUE to build SFML's Window module. This setting is ignored, if the graphics module is built.")
 sfml_set_option(SFML_BUILD_GRAPHICS TRUE BOOL "TRUE to build SFML's Graphics module.")
-sfml_set_option(SFML_BUILD_AUDIO TRUE BOOL "TRUE to build SFML's Audio module.")
-sfml_set_option(SFML_BUILD_NETWORK TRUE BOOL "TRUE to build SFML's Network module.")
+sfml_set_option(SFML_BUILD_AUDIO FALSE BOOL "TRUE to build SFML's Audio module.")
+sfml_set_option(SFML_BUILD_NETWORK FALSE BOOL "TRUE to build SFML's Network module.")
 
 # add an option for building the API documentation
 sfml_set_option(SFML_BUILD_DOC FALSE BOOL "TRUE to generate the API documentation, FALSE to ignore it")

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>sfml</name>
+  <version>2.4.2</version>
+  <description>A fixed version of SFML with added catkin capabilities</description>
+
+  <maintainer email="lhofer@labri.fr">Ludovic Hofer</maintainer>
+  <author email="laurent@sfml-dev.com">Laurent Gomila</author>
+
+  <license>Custom</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+</package>
