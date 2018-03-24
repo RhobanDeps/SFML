@@ -47,7 +47,7 @@ macro(sfml_add_library target)
             set_target_properties(${target} PROPERTIES DEBUG_POSTFIX -d)
             set_target_properties(${target} PROPERTIES SUFFIX "-${VERSION_MAJOR}${CMAKE_SHARED_LIBRARY_SUFFIX}")
         else()
-            set_target_properties(${target} PROPERTIES DEBUG_POSTFIX -d)
+#            set_target_properties(${target} PROPERTIES DEBUG_POSTFIX -d)
         endif()
         if (SFML_OS_WINDOWS AND SFML_COMPILER_GCC)
             # on Windows/gcc get rid of "lib" prefix for shared libraries,
